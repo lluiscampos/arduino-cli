@@ -64,7 +64,6 @@ func runDaemonCommand(cmd *cobra.Command, args []string) {
 	coreServer := daemon.ArduinoCoreServerImpl{
 		DownloaderHeaders: headers,
 		VersionString:     globals.VersionInfo.VersionString,
-		Config:            globals.Config,
 	}
 	srv_commands.RegisterArduinoCoreServer(s, &coreServer)
 
